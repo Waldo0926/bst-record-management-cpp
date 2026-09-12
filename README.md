@@ -222,3 +222,11 @@ For the detailed engineering notes, see
 ## License
 
 MIT License. See [`LICENSE`](LICENSE).
+
+## Related Coursework
+
+For additional implementations from the same Data Structures course,
+including stacks, queues, trees, Huffman coding, graph traversal, and
+sorting algorithms, see:
+
+[Data Structures Labs in C++](https://github.com/Waldo0926/data-structures-labs-cpp)
