@@ -1,13 +1,12 @@
 # BST Record Management System — Modern C++
 
-A command-line teacher record manager backed by a **Binary Search Tree (BST)**, written in
-modern C++17.
+[简体中文](README.zh-CN.md)
 
-This project began as a Data Structures coursework project by **Shuoxun Wen (温硕勋)** during my earlier undergraduate studies. I revisited and modernised it in 2026 to improve correctness, memory safety,
-modularity, persistence, testing, and overall software-engineering quality.
+A command-line teacher record manager backed by a **Binary Search Tree (BST)**, written in modern C++17.
 
-> The original coursework source is preserved in [`legacy/`](legacy/). The main codebase is
-> a modern reimplementation rather than a cosmetic rewrite of the old file.
+This project began as a Data Structures coursework project by **Shuoxun Wen (温硕勋)** during my earlier undergraduate studies. I revisited and modernised it in 2026 to improve correctness, memory safety, modularity, persistence, testing, and overall software-engineering quality.
+
+> The original coursework source is preserved in [`legacy/`](legacy/). The main codebase is a modern reimplementation rather than a cosmetic rewrite of the old file.
 
 ## Highlights
 
@@ -27,18 +26,11 @@ modularity, persistence, testing, and overall software-engineering quality.
 
 ## Why revisit an old coursework project?
 
-The original program already demonstrated the core data-structures concepts, but it also
-reflected the style and constraints of an early programming course: a single large source
-file, C-style strings, raw allocation, unsafe input APIs, and limited automated testing.
+The original program already demonstrated the core data-structures concepts, but it also reflected the style and constraints of an early programming course: a single large source file, C-style strings, raw allocation, unsafe input APIs, and limited automated testing.
 
-Rebuilding it is a useful exercise in **legacy-code modernisation**: keeping the original
-algorithmic intent while applying stronger software-engineering practices.
+Rebuilding it is a useful exercise in **legacy-code modernisation**: keeping the original algorithmic intent while applying stronger software-engineering practices.
 
-A notable correctness issue in the coursework version was the deletion dispatcher. Its
-"one child" condition used logical OR, which also matched nodes with two children, making
-the dedicated two-child branch unreachable. The modern implementation separates all three
-cases correctly and tests them independently. See
-[`docs/MODERNISATION.md`](docs/MODERNISATION.md).
+A notable correctness issue in the coursework version was the deletion dispatcher. Its "one child" condition used logical OR, which also matched nodes with two children, making the dedicated two-child branch unreachable. The modern implementation separates all three cases correctly and tests them independently. See [`docs/MODERNISATION.md`](docs/MODERNISATION.md).
 
 ## Data model
 
@@ -91,8 +83,7 @@ flowchart LR
 
 For unique keys, this reconstructs the same BST shape.
 
-Unlike the coursework version, the modern project does not dump compiler-dependent raw
-struct bytes. Its text format is portable and inspectable:
+Unlike the coursework version, the modern project does not dump compiler-dependent raw struct bytes. Its text format is portable and inspectable:
 
 ```text
 BST_TEACHERS_V1
@@ -160,8 +151,7 @@ Or load the included sample data immediately:
 ./build/bst_record_manager data/sample_teachers.db
 ```
 
-On Windows with a multi-config generator, the executable is usually under
-`build/Release/`.
+On Windows with a multi-config generator, the executable is usually under `build/Release/`.
 
 ## CLI
 
@@ -187,8 +177,7 @@ cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
-The tests cover insertion, duplicate rejection, lookup, traversal, updates, each structural
-deletion case, root deletion, persistence round-trips, and malformed input files.
+The tests cover insertion, duplicate rejection, lookup, traversal, updates, each structural deletion case, root deletion, persistence round-trips, and malformed input files.
 
 ## Complexity
 
@@ -201,8 +190,7 @@ For a BST of height `h`:
 | Delete | `O(log n)` | `O(n)` |
 | Traversal | `O(n)` | `O(n)` |
 
-\*When the tree is reasonably balanced. This is intentionally a plain BST rather than an
-AVL or Red-Black Tree, so sorted input can produce a skewed tree.
+\*When the tree is reasonably balanced. This is intentionally a plain BST rather than an AVL or Red-Black Tree, so sorted input can produce a skewed tree.
 
 ## Modernisation summary
 
@@ -216,17 +204,14 @@ AVL or Red-Black Tree, so sorted input can produce a skewed tree.
 | two-child deletion dispatch bug | mutually exclusive, tested deletion cases |
 | manual verification | automated CTest suite |
 
-For the detailed engineering notes, see
-[`docs/MODERNISATION.md`](docs/MODERNISATION.md) and [`docs/DESIGN.md`](docs/DESIGN.md).
+For the detailed engineering notes, see [`docs/MODERNISATION.md`](docs/MODERNISATION.md) and [`docs/DESIGN.md`](docs/DESIGN.md).
+
+## Related Coursework
+
+For additional implementations from the same Data Structures course, including stacks, queues, trees, Huffman coding, graph traversal, and sorting algorithms, see:
+
+**[Data Structures Labs in C++](https://github.com/Waldo0926/data-structures-labs-cpp)**
 
 ## License
 
 MIT License. See [`LICENSE`](LICENSE).
-
-## Related Coursework
-
-For additional implementations from the same Data Structures course,
-including stacks, queues, trees, Huffman coding, graph traversal, and
-sorting algorithms, see:
-
-[Data Structures Labs in C++](https://github.com/Waldo0926/data-structures-labs-cpp)
