@@ -1,4 +1,4 @@
-# BST Record Management System — Modern C++
+# BST Record Management System (Modern C++)
 
 [![Type](https://img.shields.io/badge/Type-Coursework_Rebuild-2563eb?style=for-the-badge)](#)
 [![Tech](https://img.shields.io/badge/Tech-C%2B%2B17-7c3aed?style=for-the-badge)](#)
@@ -23,7 +23,7 @@ This project began as a Data Structures coursework project by **Shuoxun Wen (温
   - two children via the in-order successor
 - Sorted display using in-order traversal
 - Shape-preserving persistence using pre-order traversal
-- `std::unique_ptr` ownership and RAII — no manual `malloc/free`
+- `std::unique_ptr` ownership and RAII, with no manual `malloc/free`
 - Safe string and numeric input handling
 - Versioned, human-readable persistence format
 - Automated tests with CTest

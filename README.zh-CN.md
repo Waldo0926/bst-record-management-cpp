@@ -1,11 +1,11 @@
-# BST 教师信息管理系统 — 现代 C++
+# BST 教师信息管理系统（现代 C++）
 
 [![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E8%AF%BE%E7%A8%8B%E9%87%8D%E6%9E%84-2563eb?style=for-the-badge)](#)
 [![技术](https://img.shields.io/badge/%E6%8A%80%E6%9C%AF-C%2B%2B17-7c3aed?style=for-the-badge)](#)
 [![许可证](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-16a34a?style=for-the-badge)](LICENSE)
 
 
-[English](README.md)
+[English](README.md) · **中文**
 
 这是一个基于 **二叉搜索树（Binary Search Tree, BST）** 的命令行教师信息管理系统，使用现代 C++17 编写。
 
